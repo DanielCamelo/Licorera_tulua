@@ -64,7 +64,7 @@ const Login = () => {
     <section id='login'>
       <div className='mx-auto container p-4'>
 
-        <div className='bg-white p-2 py-5 w-full max-w-md mx-auto rounded-md border-2 border-green-600'>
+        <div className='bg-white p-2 py-5 w-full max-w-md mx-auto rounded-md border-2 border-red-900'>
 
           <div className='w-20 h-20 mx-auto'>
             <img src={loginIcons} alt='login icons'></img>
@@ -96,7 +96,7 @@ const Login = () => {
                 onChange={handleChange}
                 required
                 className='w-full h-full outline-none bg-transparent'></input>
-                <div className='cursor-pointer text-green-600'>
+                <div className='cursor-pointer text-red-900'>
                   <span>
                     {
                       showPassword ? (
@@ -108,15 +108,15 @@ const Login = () => {
                   </span>
                 </div>
               </div>
-              <Link to={'/forgot-password'} className='block w-fit ml-auto hover:underline hover:text-green-600 text-right'>
+              <Link to={'/forgot-password'} className='block w-fit ml-auto hover:underline hover:text-red-900 text-right'>
               ¿Olvidaste tu contraseña?   
               </Link>         
               
             </div>
 
-            <button className='bg-green-600 text-white px-6 py-2 w-full max-w-[150px] rounded-full hover:scale-110 transition-all mx-auto block mt-6'>Iniciar Sesion</button>
+            <button className='bg-red-900 text-white px-6 py-2 w-full max-w-[150px] rounded-full hover:scale-110 transition-all mx-auto block mt-6'>Iniciar Sesion</button>
           </form>
-          <p className='my-5'>¿No tienes cuenta? <Link to={"/sign-up"} className=' text-green-600 hover:text-green-700 hover:underline'>Registrate</Link></p>
+          <p className='my-5'>¿No tienes cuenta? <Link to={"/sign-up"} className=' text-red-800 hover:text-red-900 hover:underline'>Registrate</Link></p>
         </div>
       </div>
       

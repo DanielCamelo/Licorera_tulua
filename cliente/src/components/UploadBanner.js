@@ -95,7 +95,7 @@ const UploadBanner = ({ onClose, fetchData }) => {
           <div className='flex justify-between mt-4'>
             <button 
               type="submit" 
-              className='px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition duration-200' 
+              className='px-4 py-2 bg-red-900 text-white rounded hover:bg-red-900 transition duration-200' 
               disabled={loading}
             >
               {loading ? 'Subiendo...' : 'Subir Banner'}

@@ -50,7 +50,7 @@ const VerticalCardProduct = ({ category, heading }) => {
                                 <h2 className='font-medium text-base md:text-lg text-ellipsis line-clamp-1 text-black p-1 py-2 animate-pulse rounded-full bg-slate-200'></h2>
                                 <p className='capitalize text-slate-500 p-1 animate-pulse rounded-full bg-slate-200 py-2'></p>
                                 <div className='flex gap-3'>
-                                    <p className='text-green-600 font-medium p-1 animate-pulse rounded-full bg-slate-200 w-full py-2'></p>
+                                    <p className='text-red-900 font-medium p-1 animate-pulse rounded-full bg-slate-200 w-full py-2'></p>
                                     <p className='text-slate-500 line-through p-1 animate-pulse rounded-full bg-slate-200 w-full py-2'></p>
                                 </div>
                                 <button className='text-sm text-white px-3 rounded-full bg-slate-200 py-2 animate-pulse'></button>
@@ -71,20 +71,20 @@ const VerticalCardProduct = ({ category, heading }) => {
                         )}
 
                         {data.map((product, index) => (
-                            <Link key={index} to={`product/${product?._id}`} className='w-full min-w-[280px] md:min-w-[320px] max-w-[280px] md:max-w-[320px] bg-white shadow rounded-md border-2 border-green-600'>
-                                <div className='bg-green-200 h-48 p-4 min-w-[280px] md:min-w-[145px] flex justify-center items-center rounded-md'>
+                            <Link key={index} to={`product/${product?._id}`} className='w-full min-w-[280px] md:min-w-[320px] max-w-[280px] md:max-w-[320px] bg-white shadow rounded-md border-2 border-red-900'>
+                                <div className='bg-red-100 h-48 p-4 min-w-[280px] md:min-w-[145px] flex justify-center items-center rounded-md'>
                                     <img src={product.productImage[0]} className='object-scale-down h-full hover:scale-110 transition-all mix-blend-multiply' alt={product.productName} />
                                 </div>
                                 <div className='p-4 grid gap-3'>
                                     <h2 className='font-medium text-base md:text-lg text-ellipsis line-clamp-1 text-black'>{product?.productName}</h2>
                                     <p className='capitalize text-slate-500'>{product?.category}</p>
                                     <div className='flex gap-3'>
-                                        <p className='text-green-600 font-medium'>{displayCOPCurrency(product?.sellingPrice)}</p>
+                                        <p className='text-red-900 font-medium'>{displayCOPCurrency(product?.sellingPrice)}</p>
                                         {product?.price !== product?.sellingPrice && (
                                             <p className='text-slate-500 line-through'>{displayCOPCurrency(product?.price)}</p>
                                         )}
                                     </div>
-                                    <button className='text-sm bg-green-600 hover:bg-green-700 text-white px-3 py-0.5 rounded-full' onClick={(e) => handleAddToCart(e, product?._id)}>
+                                    <button className='text-sm bg-red-900 hover:bg-red-900 text-white px-3 py-0.5 rounded-full' onClick={(e) => handleAddToCart(e, product?._id)}>
                                         Añadir al carrito
                                     </button>
                                 </div>

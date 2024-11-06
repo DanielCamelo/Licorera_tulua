@@ -182,7 +182,7 @@ const UploadProduct = ({
                             }
                         </div>
                     ) : (
-                      <p className='text-green-600 text-xs'>*Por favor, cargue la imagen del producto.</p>
+                      <p className='text-red-900 text-xs'>*Por favor, cargue la imagen del producto.</p>
                     )
                   }
                   
@@ -240,7 +240,7 @@ const UploadProduct = ({
 
 
 
-              <button className='px-3 py-2 bg-green-600 text-white mb-10 hover:bg-green-700'>Subir producto</button>
+              <button className='px-3 py-2 bg-red-800 text-white mb-10 hover:bg-red-900'>Subir producto</button>
           </form> 
 
 

@@ -44,8 +44,8 @@ const ForgotPassword = () => {
   return (
     <section id="forgot-password">
       <div className="mx-auto container p-4">
-        <div className="bg-white p-2 py-5 w-full max-w-md mx-auto rounded-md border-2 border-green-600">
-          <h2 className="text-3xl text-center font-bold text-green-600 mb-6">Restablecer contraseña</h2>
+        <div className="bg-white p-2 py-5 w-full max-w-md mx-auto rounded-md border-2 border-red-900">
+          <h2 className="text-3xl text-center font-bold text-red-900 mb-6">Restablecer contraseña</h2>
           <form className="pt-6" onSubmit={handleSubmit}>
             <div className="grid">
               <label>Correo:</label>
@@ -61,7 +61,7 @@ const ForgotPassword = () => {
               </div>
             </div>
             <button
-              className="bg-green-600 text-white px-6 py-2 w-full max-w-[200px] rounded-full hover:scale-110 transition-all mx-auto block mt-6"
+              className="bg-red-900 text-white px-6 py-2 w-full max-w-[200px] rounded-full hover:scale-110 transition-all mx-auto block mt-6"
               disabled={loading}
             >
               {loading ? 'Enviando...' : 'Enviar correo'}

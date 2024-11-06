@@ -90,7 +90,7 @@ const AllUsers = () => {
                             <td>{el?.role}</td>
                             <td>{el?.status}</td>
                             <td>
-                                <button className='bg-green-100 p-2 rounded-full cursor-pointer hover:bg-green-500 hover:text-white' 
+                                <button className='bg-red-100 p-2 rounded-full cursor-pointer hover:bg-red-900 hover:text-white' 
                                     onClick={() => {
                                         setUpdateUserDetails(el);
                                         setOpenUpdateRole(true);
@@ -98,7 +98,7 @@ const AllUsers = () => {
                                 >
                                     <MdModeEdit />
                                 </button>
-                                <button className='bg-green-100 p-2 rounded-full cursor-pointer hover:bg-red-500 hover:text-white' 
+                                <button className='bg-red-100 p-2 rounded-full cursor-pointer hover:bg-red-900 hover:text-white' 
                                     onClick={() => deleteUser(el._id)}
                                 >
                                     <MdDelete />

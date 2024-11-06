@@ -100,7 +100,7 @@ const ProductDetails = () => {
           {/***product Image */}
           <div className='h-96 flex flex-col lg:flex-row-reverse gap-4 '>
 
-              <div className='h-[300px] w-[300px] lg:h-96 lg:w-96 bg-slate-200 relative p-2 rounded-md border-2 border-green-600'>
+              <div className='h-[300px] w-[300px] lg:h-96 lg:w-96 bg-slate-200 relative p-2 rounded-md border-2 border-red-600'>
                   <img src={activeImage} className='h-full w-full object-scale-down mix-blend-multiply' onMouseMove={handleZoomImage} onMouseLeave={handleLeaveImageZoom}/>
 
                     {/**product zoom */}
@@ -143,7 +143,7 @@ const ProductDetails = () => {
                         {
                           data?.productImage?.map((imgURL,index) =>{
                             return(
-                              <div className='h-20 w-20 bg-slate-200 p-1 rounded-md border-2 border-green-600' key={imgURL}>
+                              <div className='h-20 w-20 bg-slate-200 p-1 rounded-md border-2 border-red-600' key={imgURL}>
                                 <img src={imgURL} className='w-full h-full object-scale-down mix-blend-multiply cursor-pointer' onMouseEnter={()=>handleMouseEnterProduct(imgURL)}  onClick={()=>handleMouseEnterProduct(imgURL)}/>
                               </div>
                             )
@@ -163,12 +163,12 @@ const ProductDetails = () => {
                 <h2 className='text-2xl lg:text-4xl font-medium h-6 lg:h-8  bg-slate-200 animate-pulse w-full'></h2>
                 <p className='capitalize text-slate-400 bg-slate-200 min-w-[100px] animate-pulse h-6 lg:h-8  w-full'></p>
 
-                <div className='text-green-600 bg-slate-200 h-6 lg:h-8  animate-pulse flex items-center gap-1 w-full'>
+                <div className='text-red-600 bg-slate-200 h-6 lg:h-8  animate-pulse flex items-center gap-1 w-full'>
     
                 </div>
 
                 <div className='flex items-center gap-2 text-2xl lg:text-3xl font-medium my-1 h-6 lg:h-8  animate-pulse w-full'>
-                  <p className='text-green-600 bg-slate-200 w-full'></p>
+                  <p className='text-red-600 bg-slate-200 w-full'></p>
                   <p className='text-slate-400 line-through bg-slate-200 w-full'></p>
                 </div>
 
@@ -186,14 +186,14 @@ const ProductDetails = () => {
             (
               <div className='flex flex-col gap-1 '>
                 {data?.brandName && (
-  <p className='bg-green-200 text-green-600 px-2 rounded-full inline-block w-fit '>
+  <p className='bg-red-200 text-red-600 px-2 rounded-full inline-block w-fit '>
     {data.brandName}
   </p>
 )}
                 <h2 className='text-2xl lg:text-4xl font-medium'>{data?.productName}</h2>
                 <p className='capitalize text-slate-400'>{data?.category}</p>
 
-                <div className='text-green-600 flex items-center gap-1'>
+                <div className='text-red-600 flex items-center gap-1'>
                     <FaStar/>
                     <FaStar/>
                     <FaStar/>
@@ -202,7 +202,7 @@ const ProductDetails = () => {
                 </div>
 
                 <div className='flex items-center gap-2 text-2xl lg:text-3xl font-medium my-1'>
-                  <p className='text-green-600'>{displayCOPCurrency(data.sellingPrice)}</p>
+                  <p className='text-red-600'>{displayCOPCurrency(data.sellingPrice)}</p>
                   {/* Solo mostrar el precio tachado si el precio normal es diferente al precio de venta */}
         { data?.price !== data?.sellingPrice && (
             <p className='text-slate-500 line-through'>{ displayCOPCurrency(data?.price) }</p>
@@ -210,8 +210,8 @@ const ProductDetails = () => {
                 </div>
 
                 <div className='flex items-center gap-3 my-2'>
-                  <button className='border-2 border-green-600 rounded px-3 py-1 min-w-[120px] text-green-600 font-medium hover:bg-green-600 hover:text-white' onClick={(e)=>handleBuyProduct(e,data?._id)}>Comprar</button>
-                  <button className='border-2 border-green-600 rounded px-3 py-1 min-w-[120px] font-medium text-white bg-green-600 hover:text-green-600 hover:bg-white' onClick={(e)=>handleAddToCart(e,data?._id)}>Añadir al carrito</button>
+                  <button className='border-2 border-red-600 rounded px-3 py-1 min-w-[120px] text-red-600 font-medium hover:bg-red-600 hover:text-white' onClick={(e)=>handleBuyProduct(e,data?._id)}>Comprar</button>
+                  <button className='border-2 border-red-600 rounded px-3 py-1 min-w-[120px] font-medium text-white bg-red-600 hover:text-red-600 hover:bg-white' onClick={(e)=>handleAddToCart(e,data?._id)}>Añadir al carrito</button>
                 </div>
 
                 <div>

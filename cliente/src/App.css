@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
-    --clr-main: #26670c;
-    --clr-main-light: #2fff00;
+    --clr-main: #4B0F0F;
+    --clr-main-light: #2E1B0E;
     --clr-white: #ececec;
     --clr-gray: #e2e2e2;
-    --clr-red: #707e7e;
+    --clr-red: #333333;
 }
 
 * {
@@ -64,13 +64,13 @@ a {
 
 /* En tu archivo CSS */
 .bg-green {
-    background-color: #26670c;
+    background-color: #4B0F0F;
     
   }
 
 .text-green {
     --tw-text-opacity: 1;
-    color: rgba(38, 103, 12, var(--tw-text-opacity)); 
+    color: rgba(75, 15, 15, var(--tw-text-opacity)); 
 }
 
 /*reutilizar codigo*/
@@ -203,7 +203,7 @@ a {
 
 /** Estilos para el la ventana flotante **/
 .button1 {
-    background-color: #26670c;
+    background-color: #4B0F0F;
     /** Color verde **/
     border: none;
     color: white;

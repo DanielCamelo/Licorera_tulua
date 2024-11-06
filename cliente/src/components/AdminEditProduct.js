@@ -103,7 +103,7 @@ const AdminEditProduct = ({
 
          <div className='flex justify-between items-center pb-3'>
              <h2 className='font-bold text-lg'>Editar producto</h2>
-             <div className='w-fit ml-auto text-2xl hover:text-green-600 cursor-pointer' onClick={onClose}>
+             <div className='w-fit ml-auto text-2xl hover:text-red-900 cursor-pointer' onClick={onClose}>
                  <CgClose/>
              </div>
          </div>
@@ -175,7 +175,7 @@ const AdminEditProduct = ({
                                        setFullScreenImage(el)
                                      }}/>
 
-                                     <div className='absolute bottom-0 right-0 p-1 text-white bg-green-600 rounded-full hidden group-hover:block cursor-pointer' onClick={()=>handleDeleteProductImage(index)}>
+                                     <div className='absolute bottom-0 right-0 p-1 text-white bg-red-900 rounded-full hidden group-hover:block cursor-pointer' onClick={()=>handleDeleteProductImage(index)}>
                                        <MdDelete/>  
                                      </div>
                                </div>
@@ -185,7 +185,7 @@ const AdminEditProduct = ({
                          }
                      </div>
                  ) : (
-                   <p className='text-green-600 text-xs'>*Por favor, cargue la imagen del producto.</p>
+                   <p className='text-red-900 text-xs'>*Por favor, cargue la imagen del producto.</p>
                  )
                }
                
@@ -243,7 +243,7 @@ const AdminEditProduct = ({
 
 
 
-           <button className='px-3 py-2 bg-green-600 text-white mb-10 hover:bg-green-700'>Actualizar producto</button>
+           <button className='px-3 py-2 bg-red-800 text-white mb-10 hover:bg-red-900'>Actualizar producto</button>
        </form> 
 
 

@@ -69,8 +69,8 @@ const ResetPassword = () => {
 
   return (
     <div className="mx-auto container p-4">
-      <div className="bg-white p-2 py-5 w-full max-w-md mx-auto rounded-md border-2 border-green-600">
-        <h2 className="text-3xl text-center font-bold text-green-600 mb-6">Cambiar contraseña</h2>
+      <div className="bg-white p-2 py-5 w-full max-w-md mx-auto rounded-md border-2 border-red-900">
+        <h2 className="text-3xl text-center font-bold text-red-900 mb-6">Cambiar contraseña</h2>
         <form className='pt-6' onSubmit={handleSubmit}>
           <div className='grid mb-4'>
             <label>Correo electrónico:</label>
@@ -111,7 +111,7 @@ const ResetPassword = () => {
                 required
                 className='w-full h-full outline-none bg-transparent'
               />
-              <div className='cursor-pointer text-green-600' onClick={() => setShowPassword(!showPassword)}>
+              <div className='cursor-pointer text-red-900' onClick={() => setShowPassword(!showPassword)}>
                 {showPassword ? <IoEyeSharp /> : <IoEyeOff />}
               </div>
             </div>
@@ -128,7 +128,7 @@ const ResetPassword = () => {
                 required
                 className='w-full h-full outline-none bg-transparent'
               />
-              <div className='cursor-pointer text-green-600' onClick={() => setShowPassword(!showPassword)}>
+              <div className='cursor-pointer text-red-900' onClick={() => setShowPassword(!showPassword)}>
                 {showPassword ? <IoEyeSharp /> : <IoEyeOff />}
               </div>
             </div>
@@ -136,7 +136,7 @@ const ResetPassword = () => {
 
           <button
             type="submit"
-            className='bg-green-600 text-white px-6 py-2 rounded-full hover:scale-110 transition-all mx-auto block mt-6'              
+            className='bg-red-900 text-white px-6 py-2 rounded-full hover:scale-110 transition-all mx-auto block mt-6'              
             disabled={loading}
           >
             {loading ? 'Restableciendo...' : 'Restablecer Contraseña'}
