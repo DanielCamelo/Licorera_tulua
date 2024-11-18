@@ -3,6 +3,7 @@ import BannerProduct from '../components/BannerProduct';
 import HorizontalCardProduct from '../components/HorizontalCardProduct';
 import VerticalCardProduct from '../components/VerticalCardProduct';
 import Coupon from '../components/Coupon';
+import FeaturedProducts from '../components/FeaturedProducts'; // Importa el nuevo componente
 
 const Home = () => {
   const coupons = [
@@ -27,6 +28,13 @@ const Home = () => {
     <div>
       <div className="flex-1 container px-4 rounded overflow-y-auto p-3 relative mt-4 mx-auto">
         <BannerProduct />
+
+        {/* Nueva sección destacada */}
+        <section className="my-8">
+          <h2 className="text-2xl font-bold mb-4">Recomendados para ti</h2>
+          <FeaturedProducts />
+        </section>
+
         <VerticalCardProduct category="promociones" />
         <HorizontalCardProduct category="bebidas sin alcohol" heading="Bebidas sin alcohol" />
         <HorizontalCardProduct category="cervezas" heading="Cervezas" />
