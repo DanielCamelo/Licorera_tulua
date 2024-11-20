@@ -19,6 +19,7 @@ const paymentController = async(request, response) => {
                 shipping_rate: 'shr_1PzMx7G7rlXhJKvGUNnT7tgR'
             }],
             customer_email: user.email,
+            customer_direction : user.direction,
             line_items : cartItems.map((item, index) => {
                 return {
                     price_data: {

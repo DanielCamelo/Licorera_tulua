@@ -43,18 +43,8 @@ const Home = () => {
     <div>
       <div className="flex-1 container px-4 rounded overflow-y-auto p-3 relative mt-4 mx-auto">
         <BannerProduct />
-        <VerticalCardProduct category="promociones" />
-        <HorizontalCardProduct
-          category="bebidas sin alcohol"
-          heading="Bebidas sin alcohol"
-        />
-        <HorizontalCardProduct category="cervezas" heading="Cervezas" />
-        <HorizontalCardProduct category="licores" heading="Licores" />
-        <HorizontalCardProduct category="vinos" heading="Vinos" />
-        <HorizontalCardProduct category="mini market" heading="Mini Market" />
-
-        {/* Sección de cupones */}
-        <section className="coupons-section my-8">
+         {/* Sección de cupones */}
+         <section className="coupons-section my-8">
           <h2 className="text-2xl font-bold mb-4">Cupones de descuento</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {coupons.map((coupon, index) => (
@@ -67,6 +57,18 @@ const Home = () => {
             ))}
           </div>
         </section>
+        
+        <VerticalCardProduct category="promociones" />
+        <HorizontalCardProduct
+          category="bebidas sin alcohol"
+          heading="Bebidas sin alcohol"
+        />
+        <HorizontalCardProduct category="cervezas" heading="Cervezas" />
+        <HorizontalCardProduct category="licores" heading="Licores" />
+        <HorizontalCardProduct category="vinos" heading="Vinos" />
+        <HorizontalCardProduct category="mini market" heading="Mini Market" />
+
+       
       </div>
     </div>
   );

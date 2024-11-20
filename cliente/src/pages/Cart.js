@@ -253,10 +253,25 @@ const Cart = () => {
                   <p>{totalQty}</p>
                 </div>
 
+                {/* Campo de dirección de envío */}
+              <div className="flex flex-col gap-2 px-4">
+              <label htmlFor="shippingAddress" className="font-medium text-lg text-slate-600">
+              Dirección de Envío
+              </label>
+              <input
+                type="text"
+                id="shippingAddress"
+                name="shippingAddress"
+                placeholder="Ingrese su dirección de envío"
+                className="w-full rounded-md p-2 ring-1 ring-inset ring-gray-400 focus:ring-green-600 focus:outline-none"
+                />
+              </div>
+
                 <div className="flex items-center justify-between px-4 gap-2 font-medium text-lg text-slate-600">
                   <p>Precio Total</p>
                   <p>{displayCOPCurrency(totalPrice)}</p>
                 </div>
+
                 <div className="flex items-center w-full gap-2 pr-4 pl-4 justify-between">
                   <input
                     type="text"

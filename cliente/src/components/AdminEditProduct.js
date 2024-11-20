@@ -23,7 +23,8 @@ const AdminEditProduct = ({
     description : productData?.description,
     price : productData?.price,
     sellingPrice : productData?.sellingPrice,
-    stock : productData?.stock
+    stock : productData?.stock,
+    volumen : productData?.volumen
   })
   const [openFullScreenImage,setOpenFullScreenImage] = useState(false)
   const [fullScreenImage,setFullScreenImage] = useState("")
@@ -68,7 +69,7 @@ const AdminEditProduct = ({
   }
 
 
-  {/**upload product */}
+  /*upload product */
   const handleSubmit = async(e) =>{
     e.preventDefault()
     
@@ -238,6 +239,18 @@ const AdminEditProduct = ({
              value={data.description}
            >
            </textarea>
+
+           <label htmlFor='volumen' className='mt-3'>Cantidad de volumen :</label>
+            <input 
+              type='text' 
+              id='volumen' 
+              placeholder='Ingrese la cantidad de volumen'
+              value={data.volumen} 
+              name='volumen'
+              onChange={handleOnChange}
+              className='p-2 bg-slate-100 border rounded'
+              
+            />
 
 
 

@@ -20,7 +20,8 @@ const UploadProduct = ({
     description : "",
     price : "",
     sellingPrice : "",
-    stock : ""
+    stock : "",
+    volumen : ""
   })
   const [openFullScreenImage,setOpenFullScreenImage] = useState(false)
   const [fullScreenImage,setFullScreenImage] = useState("")
@@ -65,7 +66,7 @@ const UploadProduct = ({
   }
 
 
-  {/**upload product */}
+  /**upload product */
   const handleSubmit = async(e) =>{
     e.preventDefault()
     
@@ -235,6 +236,18 @@ const UploadProduct = ({
                 value={data.description}
               >
               </textarea>
+
+              <label htmlFor='volumen' className='mt-3'>Cantidad de volumen :</label>
+            <input 
+              type='text' 
+              id='volumen' 
+              placeholder='Ingrese la cantidad de volumen'
+              value={data.volumen} 
+              name='volumen'
+              onChange={handleOnChange}
+              className='p-2 bg-slate-100 border rounded'
+              
+            />
 
 
 

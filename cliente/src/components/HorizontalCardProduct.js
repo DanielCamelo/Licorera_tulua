@@ -38,7 +38,7 @@ const HorizontalCardProduct = ({ category, heading }) => {
     };
 
     return (
-        <div className='container mx-auto px-4 my-6 relative'>
+        <div className='container mx-auto px-4 my-8 relative'>
             <h2 className='text-2xl font-semibold py-4 text-green'>{heading}</h2>
 
             <div className='flex items-center gap-4 md:gap-6 overflow-scroll scrollbar-none transition-all' ref={scrollElement}>
@@ -83,6 +83,10 @@ const HorizontalCardProduct = ({ category, heading }) => {
                                             <p className='text-slate-500 line-through'>{displayCOPCurrency(product?.price)}</p>
                                         )}
                                     </div>
+                                    <h4 className='capitalize'>
+  {product?.description?.substring(0, 20)}{product?.description?.length > 20 && '...'}
+</h4>
+
                                     <button className='text-sm bg-green-600 hover:bg-green-700 text-white px-3 py-0.5 rounded-full' onClick={(e) => handleAddToCart(e, product?._id)}>
                                         Añadir al carrito
                                     </button>

@@ -10,6 +10,7 @@ const orderSchema = new mongoose.Schema({
         type : String,
         default : ""
     },
+    direction : String,
     userId : {
         type : String,
         default : ""
