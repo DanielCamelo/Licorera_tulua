@@ -158,7 +158,7 @@ function App() {
         cartProductCount, 
         fetchUserAddToCart
       }}>
-        <ToastContainer className="rounded-full" position="top-right"/>
+        <ToastContainer className="rounded-full" position="top-right" autoClose={1000}/>
         <Header className="absolute"/>
         <CategoryList className="absolute"/>   
         <main className='min-h-screen relative'>

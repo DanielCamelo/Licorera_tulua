@@ -18,6 +18,7 @@ import AllOrder from '../pages/AllOrder'
 import Chat from '../pages/Chat'
 import AllBanner from '../pages/AllBanner'
 import ResetPassword from '../pages/ResetPassword'
+import AllCupons from '../pages/AllCupon'
 
 
 const router = createBrowserRouter([
@@ -96,6 +97,10 @@ const router = createBrowserRouter([
                     {
                         path : "all-orders",
                         element : <AllOrder/>
+                    },
+                    {
+                        path : "all-cupon",
+                        element : <AllCupons/>
                     }
                 ]
             },

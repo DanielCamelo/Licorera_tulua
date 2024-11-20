@@ -33,6 +33,9 @@ const DeleteBannerController = require('../controller/banner/deleteBaner');
 const UploadBannerController = require('../controller/banner/uploadBaner');
 const { forgotPasswordController, resetPasswordController } = require('../controller/user/forgot-password');
 const getAllDiscount = require("../controller/discount/read.js");
+const crearCupon = require('../controller/cupon/crearCupon.js');
+const obtenerCupones = require('../controller/cupon/allCupon.js');
+const eliminarCupon = require('../controller/cupon/deleteCupon.js');
 
 router.post('/signup', userSignUpController);
 router.post('/signin', userSignInController);
@@ -80,6 +83,10 @@ router.get("/all-order",authToken,allOrderController);
 
 //chat
 
+//cupon
+router.post("/crear-cupon",crearCupon)
+router.get("/allcupon",authToken,obtenerCupones);
+router.post("/delete-cupon",authToken,eliminarCupon);
 
 //Discounts
 router.get("/discounts", getAllDiscount);

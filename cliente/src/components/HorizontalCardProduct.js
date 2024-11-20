@@ -42,60 +42,61 @@ const HorizontalCardProduct = ({ category, heading }) => {
             <h2 className='text-2xl font-semibold py-4 text-green'>{heading}</h2>
 
             <div className='flex items-center gap-4 md:gap-6 overflow-scroll scrollbar-none transition-all' ref={scrollElement}>
-                {loading ? (
-                    loadingList.map((_, index) => (
-                        <div key={index} className='w-full min-w-[280px] md:min-w-[320px] max-w-[280px] md:max-w-[320px] h-36 bg-white rounded-sm shadow flex'>
-                            <div className='bg-slate-200 h-full p-4 min-w-[120px] md:min-w-[145px] animate-pulse'></div>
-                            <div className='p-4 grid w-full gap-2'>
-                                <h2 className='font-medium text-base md:text-lg text-ellipsis line-clamp-1 text-black bg-slate-200 animate-pulse p-1 rounded-full'></h2>
-                                <p className='capitalize text-green-500 p-1 bg-slate-200 animate-pulse rounded-full'></p>
-                                <div className='flex gap-3 w-full'>
-                                    <p className='text-green-600 font-medium p-1 bg-slate-200 w-full animate-pulse rounded-full'></p>
-                                    <p className='text-slate-500 line-through p-1 bg-slate-200 w-full animate-pulse rounded-full'></p>
-                                </div>
-                                <button className='text-sm text-white px-3 py-0.5 rounded-full w-full bg-slate-200 animate-pulse'></button>
-                            </div>
-                        </div>
-                    ))
-                ) : (
-                    <>
-                        {data.length > 0 && (
-                            <>
-                                <button className='bg-white shadow-md rounded-full p-1 absolute left-0 text-lg hidden md:block' onClick={scrollLeft}>
-                                    <FaAngleLeft />
-                                </button>
-                                <button className='bg-white shadow-md rounded-full p-1 absolute right-0 text-lg hidden md:block' onClick={scrollRight}>
-                                    <FaAngleRight />
-                                </button>
-                            </>
-                        )}
-
-                        {data.map((product, index) => (
-                            <Link key={index} to={`product/${product?._id}`} className='w-full min-w-[280px] md:min-w-[320px] max-w-[280px] md:max-w-[320px] h-36 bg-white shadow flex rounded-md border-2 border-green-600'>
-                                <div className='bg-green-200 h-full p-4 min-w-[120px] md:min-w-[145px] rounded-md'>
-                                    <img src={product.productImage[0]} className='object-scale-down h-full hover:scale-110 transition-all' alt={product.productName} />
-                                </div>
-                                <div className='p-4 grid'>
-                                    <h2 className='font-medium text-base md:text-lg text-ellipsis line-clamp-1 text-black'>{product?.productName}</h2>
-                                    <div className='flex gap-3'>
-                                        <p className='text-green-600 font-medium'>{displayCOPCurrency(product?.sellingPrice)}</p>
-                                        {product?.price !== product?.sellingPrice && (
-                                            <p className='text-slate-500 line-through'>{displayCOPCurrency(product?.price)}</p>
-                                        )}
-                                    </div>
-                                    <h4 className='capitalize'>
-  {product?.description?.substring(0, 20)}{product?.description?.length > 20 && '...'}
-</h4>
-
-                                    <button className='text-sm bg-green-600 hover:bg-green-700 text-white px-3 py-0.5 rounded-full' onClick={(e) => handleAddToCart(e, product?._id)}>
-                                        Añadir al carrito
-                                    </button>
-                                </div>
-                            </Link>
-                        ))}
-                    </>
-                )}
+    {loading ? (
+        loadingList.map((_, index) => (
+            <div key={index} className='w-full min-w-[320px] md:min-w-[400px] max-w-[320px] md:max-w-[400px] h-48 bg-white rounded-sm shadow flex'>
+                <div className='bg-slate-200 h-full p-4 min-w-[160px] md:min-w-[200px] animate-pulse'></div>
+                <div className='p-4 grid w-full gap-2'>
+                    <h2 className='font-medium text-base md:text-lg text-ellipsis line-clamp-1 text-black bg-slate-200 animate-pulse p-1 rounded-full'></h2>
+                    <p className='capitalize text-green-500 p-1 bg-slate-200 animate-pulse rounded-full'></p>
+                    <div className='flex gap-3 w-full'>
+                        <p className='text-green-600 font-medium p-1 bg-slate-200 w-full animate-pulse rounded-full'></p>
+                        <p className='text-slate-500 line-through p-1 bg-slate-200 w-full animate-pulse rounded-full'></p>
+                    </div>
+                    <button className='text-sm text-white px-3 py-0.5 rounded-full w-full bg-slate-200 animate-pulse'></button>
+                </div>
             </div>
+        ))
+    ) : (
+        <>
+            {data.length > 0 && (
+                <>
+                    <button className='bg-white shadow-md rounded-full p-1 absolute left-0 text-lg hidden md:block' onClick={scrollLeft}>
+                        <FaAngleLeft />
+                    </button>
+                    <button className='bg-white shadow-md rounded-full p-1 absolute right-0 text-lg hidden md:block' onClick={scrollRight}>
+                        <FaAngleRight />
+                    </button>
+                </>
+            )}
+
+            {data.map((product, index) => (
+                <Link key={index} to={`product/${product?._id}`} className='w-full min-w-[320px] md:min-w-[400px] max-w-[320px] md:max-w-[400px] h-48 bg-white shadow flex rounded-md border-2 border-green-600'>
+                    <div className='bg-green-200 h-full p-4 min-w-[160px] md:min-w-[200px] rounded-md'>
+                        <img src={product.productImage[0]} className='object-scale-down h-full hover:scale-110 transition-all' alt={product.productName} />
+                    </div>
+                    <div className='p-4 grid'>
+                        <h2 className='font-medium text-base md:text-lg text-ellipsis line-clamp-1 text-black'>{product?.productName}</h2>
+                        <div className='flex gap-3'>
+                            <p className='text-green-600 font-medium'>{displayCOPCurrency(product?.sellingPrice)}</p>
+                            {product?.price !== product?.sellingPrice && (
+                                <p className='text-slate-500 line-through'>{displayCOPCurrency(product?.price)}</p>
+                            )}
+                        </div>
+                        <h4 className='capitalize'>
+                            {product?.description?.substring(0, 20)}{product?.description?.length > 20 && '...'}
+                        </h4>
+
+                        <button className='text-sm bg-green-600 hover:bg-green-700 text-white px-3 py-0.5 rounded-full' onClick={(e) => handleAddToCart(e, product?._id)}>
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </Link>
+            ))}
+        </>
+    )}
+</div>
+
         </div>
     );
 };

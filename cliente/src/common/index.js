@@ -125,6 +125,18 @@ const SummaryApi = {
     url: `${backendDomin}/api/all-banners`,
     method: "get",
   },
+  uploadCupon: {
+    url: `${backendDomin}/api/crear-cupon`,
+    method: "post",
+  },
+  deleteCupon: {
+    url: `${backendDomin}/api/delete-cupon`,
+    method: "post",
+  },
+  allCupon: {
+    url: `${backendDomin}/api/allcupon`,
+    method: "get",
+  },
   discount: {
     url: `${backendDomin}/api/discounts`,
     method: "get",
