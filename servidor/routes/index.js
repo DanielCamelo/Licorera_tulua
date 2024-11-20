@@ -32,6 +32,7 @@ const allBanners = require('../controller/banner/allBanner');
 const DeleteBannerController = require('../controller/banner/deleteBaner');
 const UploadBannerController = require('../controller/banner/uploadBaner');
 const { forgotPasswordController, resetPasswordController } = require('../controller/user/forgot-password');
+const getAllDiscount = require("../controller/discount/read.js");
 
 router.post('/signup', userSignUpController);
 router.post('/signin', userSignInController);
@@ -79,6 +80,9 @@ router.get("/all-order",authToken,allOrderController);
 
 //chat
 
+
+//Discounts
+router.get("/discounts", getAllDiscount);
 
 
 module.exports = router;
