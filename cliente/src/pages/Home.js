@@ -58,7 +58,7 @@ const Home = () => {
           </div>
         </section>
         
-        <VerticalCardProduct category="promociones" />
+        <VerticalCardProduct category="recomendaciones" heading="Recomendaciones" />
         <HorizontalCardProduct
           category="bebidas sin alcohol"
           heading="Bebidas sin alcohol"

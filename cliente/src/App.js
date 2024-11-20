@@ -38,7 +38,6 @@ function App() {
       id: 'facturacion',
       message: 'Para la facturación, por favor ingresa a tu cuenta y accede a la sección de Facturación en el menú principal.',
       end: true,
-      id: 'facturacion',
     },
     {
       id: 'pedidos',

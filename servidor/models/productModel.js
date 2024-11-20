@@ -1,5 +1,4 @@
 const mongoose = require('mongoose')
-const { BiVolume } = require('react-icons/bi')
 
 const productSchema = mongoose.Schema({
     productName : String,

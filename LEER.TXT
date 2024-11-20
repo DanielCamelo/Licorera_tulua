@@ -12,3 +12,8 @@ npm run dev "si quieren hacer cambios o ajustar algo si solo es para correr el c
 npm start
 
 para mejorar la carga y por seguridad de las imagenes se utilizo cloudary 
+
+
+para iniciar pasarela de pago se abre la carpeta stripe y luego se hace un cmd con esa ruta de hay los siguientes comandos
+stripe login
+stripe listen --forward-to localhost:5000/api/webhook

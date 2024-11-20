@@ -32,7 +32,7 @@ const AllOrder = () => {
            )
         }
   
-        <div className='p-4 w-full'>
+        <div className='p-4 w-full bg-green'>
             {
               data.map((item,index)=>{
                 return(
@@ -44,7 +44,7 @@ const AllOrder = () => {
                                 {
                                   item?.productDetails.map((product,index)=>{
                                     return(
-                                      <div key={product.productId+index} className='flex  gap-3 bg-slate-100'>
+                                      <div key={product.productId+index} className='flex  gap-3'>
                                           <img 
                                             src={product.image[0]}
                                             className='w-28 h-28 bg-slate-200 object-scale-down p-2'

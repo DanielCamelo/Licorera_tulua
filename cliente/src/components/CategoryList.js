@@ -14,8 +14,8 @@ const CategoryList = () => {
         setLoading(false);
 
         // Ordenar "Promociones" al final y "Vinos" antes de "Promociones"
-        const reorderedCategories = dataResponse.data.filter(product => product.category !== 'promociones');
-        const promocionesCategory = dataResponse.data.find(product => product.category === 'promociones');
+        const reorderedCategories = dataResponse.data.filter(product => product.category !== 'recomendaciones');
+        const promocionesCategory = dataResponse.data.find(product => product.category === 'recomendaciones');
 
         // Si existen, añadir "Vinos" y "Promociones" al final
         if (promocionesCategory) reorderedCategories.push(promocionesCategory);
@@ -29,7 +29,7 @@ const CategoryList = () => {
 
     return (
         <div className='bg-green'>
-            <div className='container mx-auto p-3'>
+            <div className='container mx-auto py-3 px-1'>
                 <div className='flex items-center gap-3 justify-between overflow-scroll scrollbar-none'>
                     {
                         loading ? (

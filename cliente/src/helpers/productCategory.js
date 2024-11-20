@@ -4,7 +4,7 @@ const productCategory = [
     {id : 3, label : "Licores", value : "licores"},
     {id : 4 , label : "Vinos", value : "vinos"},
     {id : 5 , label : "Minimarket", value : "mini market"},
-    {id : 6 , label : "Promociones", value : "promociones"},
+    {id : 6 , label : "recomendaciones", value : "recomendaciones"},
                         
 
 ]
