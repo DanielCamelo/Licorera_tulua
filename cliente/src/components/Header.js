@@ -62,7 +62,7 @@ const Header = () => {
   return (
 
     
-    <header className='h-16 shadow-md bg-green'> 
+    <header className='h-16 shadow-md bg-red'> 
     
     
     
@@ -140,7 +140,7 @@ const Header = () => {
                       <Link to={"/cart"} className='text-2xl relative text-white'>
                           <span><FaShoppingCart/></span>
       
-                          <div className='bg-white text-green w-5 h-5 rounded-full p-1 flex items-center justify-center absolute -top-2 -right-4'>
+                          <div className='bg-white text-red w-5 h-5 rounded-full p-1 flex items-center justify-center absolute -top-2 -right-4'>
                               <p className='text-sm'>{context?.cartProductCount}</p>
                           </div>
                       </Link>
@@ -151,10 +151,10 @@ const Header = () => {
                 <div>
                     {
                         user?._id ? (
-                            <button onClick={handleLogout} className='bg-slate-50 text-green px-3 py-1 rounded-full hover:bg-slate-200'>Cerrar</button>
+                            <button onClick={handleLogout} className='bg-slate-50 text-red px-3 py-1 rounded-full hover:bg-slate-200'>Cerrar</button>
                         ):
                         (
-                            <Link to={"/login"} className='bg-slate-50 text-green px-3 py-1 rounded-full hover:bg-slate-200'>Iniciar sesión</Link>
+                            <Link to={"/login"} className='bg-slate-50 text-red px-3 py-1 rounded-full hover:bg-slate-200'>Iniciar sesión</Link>
 
                         )
                     }

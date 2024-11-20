@@ -62,12 +62,12 @@ const UploadBanner = ({ onClose, fetchData }) => {
       <div className="bg-white rounded-lg shadow-lg p-6 w-11/12 max-w-lg">
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-xl font-semibold">Subir Banner</h2>
-          <button onClick={onClose} className="text-gray-600 hover:text-gray-800">
+          <button onClick={onClose} className="text-gray-900 hover:text-gray-800">
             <CgClose size={24} />
           </button>
         </div>
 
-        {error && <p className="text-green">{error}</p>}
+        {error && <p className="text-red">{error}</p>}
         <form onSubmit={handleSubmit} className="grid gap-4">
           <label htmlFor='bannerImage'>Imagen del banner:</label>
           <label htmlFor='uploadBannerInput'>
@@ -95,7 +95,7 @@ const UploadBanner = ({ onClose, fetchData }) => {
           <div className='flex justify-between mt-4'>
             <button 
               type="submit" 
-              className='px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition duration-200' 
+              className='px-4 py-2 bg-red-900 text-white rounded hover:bg-red-700 transition duration-200' 
               disabled={loading}
             >
               {loading ? 'Subiendo...' : 'Subir Banner'}

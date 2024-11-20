@@ -115,7 +115,7 @@ const ProductDetails = () => {
       <div className="min-h-[200px] flex flex-col lg:flex-row gap-4 rounded-md p-2 border-2 border-slate-400">
         {/*** product Image ***/}
         <div className="h-96 flex flex-col lg:flex-row-reverse gap-4 ">
-          <div className="h-[300px] w-[300px] lg:h-96 lg:w-96 bg-slate-200 relative p-2 rounded-md border-2 border-green-600">
+          <div className="h-[300px] w-[300px] lg:h-96 lg:w-96 bg-slate-200 relative p-2 rounded-md border-2 border-red-900">
             <img
               src={activeImage}
               className="h-full w-full object-scale-down mix-blend-multiply"
@@ -157,7 +157,7 @@ const ProductDetails = () => {
                 {data?.productImage?.map((imgURL, index) => {
                   return (
                     <div
-                      className="h-20 w-20 bg-slate-200 p-1 rounded-md border-2 border-green-600"
+                      className="h-20 w-20 bg-slate-200 p-1 rounded-md border-2 border-red-900"
                       key={imgURL}
                     >
                       <img
@@ -177,14 +177,14 @@ const ProductDetails = () => {
         {/*** product details ***/}
         <div className="flex flex-col gap-1">
           {data?.brandName && (
-            <p className="bg-green-200 text-green-600 px-2 rounded-full inline-block w-fit ">
+            <p className="bg-red-200 text-red-900 px-2 rounded-full inline-block w-fit ">
               {data.brandName}
             </p>
           )}
           <h2 className="text-2xl lg:text-4xl font-medium">{data?.productName}</h2>
           <p className="capitalize text-slate-400">{data?.category}</p>
 
-          <div className="text-green-600 flex items-center gap-1">
+          <div className="text-red-900 flex items-center gap-1">
             <FaStar />
             <FaStar />
             <FaStar />
@@ -193,7 +193,7 @@ const ProductDetails = () => {
           </div>
 
           <div className="flex items-center gap-2 text-2xl lg:text-3xl font-medium my-1">
-            <p className="text-green-600">{displayCOPCurrency(data.sellingPrice)}</p>
+            <p className="text-red-900">{displayCOPCurrency(data.sellingPrice)}</p>
             {data?.price !== data?.sellingPrice && (
               <p className="text-slate-500 line-through">{displayCOPCurrency(data?.price)}</p>
             )}
@@ -201,13 +201,13 @@ const ProductDetails = () => {
 
           <div className="flex items-center gap-3 my-2">
             <button
-              className="border-2 border-green-600 rounded px-3 py-1 min-w-[120px] text-green-600 font-medium hover:bg-green-600 hover:text-white"
+              className="border-2 border-red-900 rounded px-3 py-1 min-w-[120px] text-red-900 font-medium hover:bg-red-900 hover:text-white"
               onClick={(e) => handleBuyProduct(e, data?._id)}
             >
               Comprar
             </button>
             <button
-              className="border-2 border-green-600 rounded px-3 py-1 min-w-[120px] font-medium text-white bg-green-600 hover:text-green-600 hover:bg-white"
+              className="border-2 border-red-900 rounded px-3 py-1 min-w-[120px] font-medium text-white bg-red-900 hover:text-red-900 hover:bg-white"
               onClick={(e) => handleAddToCart(e, data?._id)}
             >
               Añadir al carrito

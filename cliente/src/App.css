@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
-    --clr-main: #26670c;
-    --clr-main-light: #2fff00;
+    --clr-main: hsl(0, 79%, 23%);
+    --clr-main-light: #860a0a;
     --clr-white: #ececec;
     --clr-gray: #e2e2e2;
     --clr-red: #707e7e;
@@ -63,12 +63,12 @@ a {
 }
 
 /* En tu archivo CSS */
-.bg-green {
-    background-color: #26670c;
+.bg-red {
+    background-color: hsl(0, 79%, 23%);
     
   }
 
-.text-green {
+.text-red {
     --tw-text-opacity: 1;
     color: rgba(38, 103, 12, var(--tw-text-opacity)); 
 }

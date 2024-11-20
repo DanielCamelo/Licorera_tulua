@@ -39,13 +39,13 @@ const AdminProductCard = ({ data, fetchdata }) => {
     };
 
     return (
-        <div className='bg-white p-4 rounded-2xl shadow flex border-2 border-green-600'>
+        <div className='bg-white p-4 rounded-2xl shadow flex border-2 border-red-900'>
             <div className='w-40'>
                 <div className='w-32 h-32 flex justify-center items-center'>
                     <img src={data?.productImage[0]} alt={data.productName} className='mx-auto object-fill h-full' />
                 </div>
                 <h1 className='text-ellipsis line-clamp-2'>{data.productName}</h1>
-                <h1 className='text-ellipsis line-clamp-2 text-green'>{data.category}</h1>
+                <h1 className='text-ellipsis line-clamp-2 text-red'>{data.category}</h1>
 
                 <div>
                     <p className='font-semibold'>
@@ -54,13 +54,13 @@ const AdminProductCard = ({ data, fetchdata }) => {
 
                     <div className="flex space-x-2">
                         <div 
-                            className='w-fit p-2 bg-green-100 hover:bg-green-600 rounded-full hover:text-white cursor-pointer' 
+                            className='w-fit p-2 bg-red-100 hover:bg-red-900 rounded-full hover:text-white cursor-pointer' 
                             onClick={() => setEditProduct(true)}
                         >
                             <MdModeEditOutline />
                         </div>
                         <div 
-                            className='w-fit p-2 bg-green-100 hover:bg-red-600 rounded-full hover:text-white cursor-pointer' 
+                            className='w-fit p-2 bg-red-100 hover:bg-red-600 rounded-full hover:text-white cursor-pointer' 
                             onClick={deleteProduct}
                         >
                             <MdDelete />

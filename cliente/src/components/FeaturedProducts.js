@@ -33,7 +33,7 @@ const FeaturedProducts = () => {
           <img src={product.imageUrl} alt={product.name} className="w-full h-40 object-cover rounded-md mb-4" />
           <h3 className="text-lg font-semibold">{product.name}</h3>
           <p className="text-gray-600">{product.description}</p>
-          <p className="text-green-500 font-bold mt-2">{product.price}</p>
+          <p className="text-red-800 font-bold mt-2">{product.price}</p>
         </div>
       ))}
     </div>

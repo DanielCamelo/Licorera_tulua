@@ -37,7 +37,7 @@ const OrderPage = () => {
           {
             data.map((item,index)=>{
               return(
-                <div key={item.userId+index} className='bg-green'>
+                <div key={item.userId+index} className='bg-red'>
                    <p className='font-medium text-lg '>{moment(item.createdAt).format('LL')}</p> 
                    <div className='border rounded'>
                         <div className='flex flex-col lg:flex-row justify-between'>
@@ -53,7 +53,7 @@ const OrderPage = () => {
                                         <div>
                                           <div className='font-medium text-lg text-ellipsis line-clamp-1'>{product.name}</div>
                                           <div className='flex items-center gap-5 mt-1'>
-                                            <div className='text-lg text-green-500'>{displayCOPCurrency(product.price)}</div>
+                                            <div className='text-lg text-red-800'>{displayCOPCurrency(product.price)}</div>
                                             <p>Cantidad : {product.quantity}</p>
                                           </div>
                                         </div>

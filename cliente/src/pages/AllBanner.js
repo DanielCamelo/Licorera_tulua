@@ -56,9 +56,9 @@ const AllBanners = () => {
   return (
     <div>
       <div className='bg-white py-2 px-4 flex justify-between items-center'>
-        <h2 className='font-bold text-lg text-green-600'>Todos los Banners</h2>
+        <h2 className='font-bold text-lg text-red-900'>Todos los Banners</h2>
         <button 
-          className='border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition-all py-1 px-3 rounded-full' 
+          className='border-2 border-red-900 text-red-900 hover:bg-red-900 hover:text-white transition-all py-1 px-3 rounded-full' 
           onClick={() => setOpenUploadBanner(true)}
         >
           Subir Banner

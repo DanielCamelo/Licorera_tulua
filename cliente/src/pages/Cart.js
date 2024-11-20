@@ -193,7 +193,7 @@ const Cart = () => {
                     <div className="px-4 py-2 relative">
                       {/**delete product */}
                       <div
-                        className="absolute right-0 text-green-600 rounded-full p-2 hover:bg-green-600 hover:text-white cursor-pointer"
+                        className="absolute right-0 text-red-900 rounded-full p-2 hover:bg-red-900 hover:text-white cursor-pointer"
                         onClick={() => deleteCartProduct(product?._id)}
                       >
                         <MdDelete />
@@ -206,7 +206,7 @@ const Cart = () => {
                         {product?.productId.category}
                       </p>
                       <div className="flex items-center justify-between">
-                        <p className="text-green-600 font-medium text-lg">
+                        <p className="text-red-900 font-medium text-lg">
                           {displayCOPCurrency(product?.productId?.sellingPrice)}
                         </p>
                         <p className="text-slate-600 font-semibold text-lg">
@@ -217,7 +217,7 @@ const Cart = () => {
                       </div>
                       <div className="flex items-center gap-3 mt-1">
                         <button
-                          className="border border-green-600 text-green-600 hover:bg-green-600 hover:text-white w-6 h-6 flex justify-center items-center rounded "
+                          className="border border-red-900 text-red-900 hover:bg-red-900 hover:text-white w-6 h-6 flex justify-center items-center rounded "
                           onClick={() =>
                             decraseQty(product?._id, product?.quantity)
                           }
@@ -226,7 +226,7 @@ const Cart = () => {
                         </button>
                         <span>{product?.quantity}</span>
                         <button
-                          className="border border-green-600 text-green-600 hover:bg-green-600 hover:text-white w-6 h-6 flex justify-center items-center rounded "
+                          className="border border-red-900 text-red-900 hover:bg-red-900 hover:text-white w-6 h-6 flex justify-center items-center rounded "
                           onClick={() =>
                             increaseQty(product?._id, product?.quantity)
                           }
@@ -247,7 +247,7 @@ const Cart = () => {
               <div className="h-30 bg-slate-200 border border-slate-300 animate-pulse"></div>
             ) : (
               <div className="h-30 bg-white flex flex-col gap-3">
-                <h2 className="text-white bg-green-600 px-4 py-1">Pago</h2>
+                <h2 className="text-white bg-red-900 px-4 py-1">Pago</h2>
                 <div className="flex items-center justify-between px-4 gap-2 font-medium text-lg text-slate-600">
                   <p>Total de Productos</p>
                   <p>{totalQty}</p>
@@ -263,7 +263,7 @@ const Cart = () => {
                 id="shippingAddress"
                 name="shippingAddress"
                 placeholder="Ingrese su dirección de envío"
-                className="w-full rounded-md p-2 ring-1 ring-inset ring-gray-400 focus:ring-green-600 focus:outline-none"
+                className="w-full rounded-md p-2 ring-1 ring-inset ring-gray-400 focus:ring-red-900 focus:outline-none"
                 />
               </div>
 

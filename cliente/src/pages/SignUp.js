@@ -142,7 +142,7 @@ const SignUp = () => {
   return (
     <section id='sign-up'>
       <div className='mx-auto container p-4'>
-        <div className='bg-white p-2 py-5 w-full max-w-md mx-auto rounded-md border-2 border-green-600'>
+        <div className='bg-white p-2 py-5 w-full max-w-md mx-auto rounded-md border-2 border-red-900'>
           <div className='w-20 h-20 mx-auto rounded-full'>
             <div className='overflow-hidden w-20 h-20'>
               <img src={data.profilepic || loginIcons} alt='login icons' className='rounded-full w-full h-full object-cover'></img>
@@ -232,7 +232,7 @@ const SignUp = () => {
                   required
                   className='w-full h-full outline-none bg-transparent'>
                 </input>
-                <div className='cursor-pointer text-green-600'>
+                <div className='cursor-pointer text-red-900'>
                   <span>
                     {showPassword ? (
                       <IoEyeSharp onClick={() => setShowPassword(false)} />
@@ -256,7 +256,7 @@ const SignUp = () => {
                   required
                   className='w-full h-full outline-none bg-transparent'>
                 </input>
-                <div className='cursor-pointer text-green-600'>
+                <div className='cursor-pointer text-red-900'>
                   <span>
                     {showConfirmPassword ? (
                       <IoEyeSharp onClick={() => setShowConfirmPassword(false)} />
@@ -286,8 +286,8 @@ const SignUp = () => {
             )}
 
             <div className='flex justify-between mt-4'>
-              <p>¿Ya tienes cuenta? <Link to='/login' className='text-green-500'>Iniciar sesión</Link></p>
-              <button type='submit' className='bg-green-600 text-white px-4 py-2 rounded'>
+              <p>¿Ya tienes cuenta? <Link to='/login' className='text-red-800'>Iniciar sesión</Link></p>
+              <button type='submit' className='bg-red-900 text-white px-4 py-2 rounded'>
                 {isCodeSent ? 'Verificar Código' : 'Enviar Código'}
               </button>
             </div>
