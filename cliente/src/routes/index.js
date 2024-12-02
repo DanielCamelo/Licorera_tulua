@@ -15,7 +15,6 @@ import Success from '../pages/Success'
 import Cancel from '../pages/Cancel'
 import OrderPage from '../pages/OrderPage'
 import AllOrder from '../pages/AllOrder'
-import Chat from '../pages/Chat'
 import AllBanner from '../pages/AllBanner'
 import ResetPassword from '../pages/ResetPassword'
 import AllCupons from '../pages/AllCupon'
@@ -57,10 +56,6 @@ const router = createBrowserRouter([
             {
                 path : 'cart',
                 element : <Cart/>
-            },
-            {
-                path : "chat",
-                element : <Chat/>
             },
             {
                 path : 'success',

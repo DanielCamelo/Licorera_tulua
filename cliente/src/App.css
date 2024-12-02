@@ -265,8 +265,7 @@ a {
 }
 /*estilos boton whatsapp y chatbot*/
 
-/* Estilos compartidos para los botones flotantes */
-/* Contenedor vertical para los botones */
+/* Contenedor vertical para botones flotantes */
 .floating-button-container {
     display: flex;
     flex-direction: column; /* Alineación vertical */
@@ -277,42 +276,43 @@ a {
     z-index: 1100;
 }
 
-/* Estilos compartidos para los botones flotantes */
+/* Botones flotantes generales */
 .floating-button {
-    width: 60px; /* Tamaño uniforme */
+    width: 60px;
     height: 60px;
-    border-radius: 60%; 
-    padding: 0px;
+    border-radius: 50%;
+    padding: 0;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 2px solid var(--clr-main-light); /* Bordes visibles */
+    cursor: pointer;
 }
 
 /* Botón de WhatsApp */
 .whatsapp-icon {
-    background-color: var(--clr-main); /* Mismo color de fondo */
+    background-color: var(--clr-main);
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%; /* Redondeado como el botón del ChatBot */
-    width: 60px; /* Mismo tamaño que el botón del ChatBot */
+    border-radius: 50%;
+    width: 60px;
     height: 60px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra igual que el ChatBot */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
-/* Botón de WhatsApp */
+
 .whatsapp-icon svg {
-    width: 40px; /* Ajusta el tamaño del ancho del ícono */
-    height: 40px; /* Ajusta el tamaño del alto del ícono */
-    color: white; /* Mantiene el color en blanco */
+    width: 40px;
+    height: 40px;
+    color: white;
 }
 
 .whatsapp-icon:hover {
     background-color: var(--clr-main-light);
-    box-shadow: 0px 4px 15px rgba(0, 255, 0, 0.3); /* Sombra verde al pasar el cursor */
-    border-color: var(--clr-main); /* Cambia el color del borde al pasar el cursor */
+    box-shadow: 0px 4px 15px rgba(0, 255, 0, 0.3); /* Efecto hover */
+    transform: scale(1.1); /* Agrandamiento suave */
 }
 
 /* Botón del ChatBot */
@@ -321,31 +321,61 @@ a {
     border: none;
     color: white;
     font-size: 24px;
-    cursor: pointer;
-    border-radius: 50%; 
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .chat-bot-button:hover {
     background-color: var(--clr-main-light);
-    box-shadow: 0px 4px 15px rgba(0, 255, 0, 0.3); /* Sombra verde al pasar el cursor */
-    border-color: var(--clr-main); /* Cambia el color del borde al pasar el cursor */
-}
-
-/* Estilos adicionales para mejorar la apariencia */
-.floating-button:hover {
-    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2); /* Sombra más profunda en hover */
-    transform: scale(1.1); /* Efecto de agrandamiento suave */
+    transform: scale(1.1); /* Agrandamiento suave */
+    box-shadow: 0px 4px 15px rgba(0, 255, 0, 0.3);
 }
 
 /* Ajustes responsivos */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
+    /* Ajustes para pantallas grandes */
     .floating-button-container {
-        bottom: 10px; /* Ajusta la posición inferior en pantallas más pequeñas */
+        bottom: 15px;
+        right: 15px;
+    }
+    .floating-button {
+        width: 55px;
+        height: 55px;
+    }
+    .whatsapp-icon svg {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Ajustes para pantallas medianas */
+    .floating-button-container {
+        bottom: 10px;
         right: 10px;
     }
-
     .floating-button {
         width: 50px;
         height: 50px;
+    }
+    .whatsapp-icon svg {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajustes para pantallas pequeñas */
+    .floating-button-container {
+        bottom: 5px;
+        right: 5px;
+    }
+    .floating-button {
+        width: 45px;
+        height: 45px;
+    }
+    .whatsapp-icon svg {
+        width: 25px;
+        height: 25px;
     }
 }
