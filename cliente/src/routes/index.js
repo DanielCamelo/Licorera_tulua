@@ -18,6 +18,8 @@ import AllOrder from '../pages/AllOrder'
 import AllBanner from '../pages/AllBanner'
 import ResetPassword from '../pages/ResetPassword'
 import AllCupons from '../pages/AllCupon'
+import FacePanel from '../pages/FacePanel'
+import Facel from '../pages/Facel'
 
 
 const router = createBrowserRouter([
@@ -72,6 +74,14 @@ const router = createBrowserRouter([
             {
                 path : 'order',
                 element : <OrderPage/>
+            },
+            {
+                path : 'perfil',
+                element : <Facel/>
+            },
+            {
+                path : 'panel-usuario',
+                element : <FacePanel/>
             },
             {
                 path: "admin-panel",

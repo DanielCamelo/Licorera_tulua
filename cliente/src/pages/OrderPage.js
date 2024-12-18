@@ -1,14 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import SummaryApi from '../common';
 import displayCOPCurrency from '../helpers/displayCurrency';
+import { FaUserCircle} from 'react-icons/fa';
+import { Link} from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import moment from 'moment';
 import 'moment/locale/es'; // Importa el idioma español
 moment.locale('es'); // Configura el idioma a español
+
 
 const OrderPage = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [expandedOrders, setExpandedOrders] = useState([]);
+  const user = useSelector(state => state?.user?.user)
 
   const fetchOrderDetails = async () => {
     setLoading(true);
@@ -36,7 +41,35 @@ const OrderPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 p-6">
+    <div className='flex  min-h-screen bg-gray-50'>
+<aside className='bg-red min-h-full  w-full  max-w-60'>
+                            <div className='h-32  flex justify-center items-center flex-col'>
+                                <div className='text-5xl cursor-pointer relative flex justify-center'>
+                                    {
+                                    user?.profilepic ? (
+                                        
+                                        <img src={user?.profilepic} className='w-20 h-20 rounded-full bg-white' alt={user?.name}></img>
+                                    ) : (
+                                        <FaUserCircle />
+                                    )
+                                    }
+                                </div>
+                                <p className='capitalize text-lg text-white font-bold'>{user?.name}</p>
+                                <p className='text-white font-bold '>{user?.role}</p>
+                            </div>
+            
+                             {/***navigation */}       
+                            <div>   
+                                <nav className='grid p-4'>
+                                    <Link to={"/perfil"} className='block px-4 py-2 rounded-lg text-white font-bold : hover:bg-red-900'>Actualizar Datos</Link>
+                                    <Link to={"/order"} className='block px-4 py-2 rounded-lg text-white font-bold : hover:bg-red-900'>Historial De Compras</Link>
+      
+                                </nav>
+                            </div>  
+                    </aside>
+   
+    <div className="min-h-screen  bg-white w-full p-4">
+      
       <h1 className="text-2xl font-bold text-center mb-6 text-gray-800">
         Mis Pedidos
       </h1>
@@ -157,6 +190,7 @@ const OrderPage = () => {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 };

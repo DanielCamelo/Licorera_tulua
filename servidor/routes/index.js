@@ -36,6 +36,9 @@ const getAllDiscount = require("../controller/discount/read.js");
 const crearCupon = require('../controller/cupon/crearCupon.js');
 const obtenerCupones = require('../controller/cupon/allCupon.js');
 const eliminarCupon = require('../controller/cupon/deleteCupon.js');
+const createComentarioController = require('../controller/comentarios/crearComentario.js');
+const getComentariosByProductController = require('../controller/comentarios/obtenerComentarios.js');
+const updateUserDetailsController = require('../controller/user/updateUserDatail.js');
 
 router.post('/signup', userSignUpController);
 router.post('/signin', userSignInController);
@@ -45,6 +48,7 @@ router.post('/send-verification-code', userSignUpController);
 router.post('/verify-code', userSignUpController); 
 router.post('/forgot-password', forgotPasswordController);
 router.post('/reset-password', resetPasswordController);
+router.post("/actualizarUsuario",authToken,updateUserDetailsController);
 
 
 //panel admin
@@ -90,6 +94,10 @@ router.post("/delete-cupon",authToken,eliminarCupon);
 
 //Discounts
 router.get("/discounts", getAllDiscount);
+
+//comentarios
+router.post("/crear-comentario",authToken,createComentarioController)
+router.get("/comentarios",authToken,getComentariosByProductController)
 
 
 module.exports = router;

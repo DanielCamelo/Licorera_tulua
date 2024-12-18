@@ -117,18 +117,11 @@ const Header = () => {
                     </Link>
                   )}
                   <Link
-                    to={"/order"}
+                    to={"/panel-usuario"}
                     className="whitespace-nowrap hidden md:block hover:bg-slate-200 rounded-full p-2"
                     onClick={() => setMenuDisplay((preve) => !preve)}
                   >
                     Perfil
-                  </Link>
-                  <Link
-                    to={"/order"}
-                    className="whitespace-nowrap hidden md:block hover:bg-slate-200 rounded-full p-2"
-                    onClick={() => setMenuDisplay((preve) => !preve)}
-                  >
-                    Ordenes
                   </Link>
                 </nav>
               </div>

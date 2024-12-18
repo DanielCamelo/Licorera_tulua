@@ -29,6 +29,10 @@ const SummaryApi = {
     url: `${backendDomin}/api/user-details`,
     method: "get",
   },
+  actualizarUser : {
+    url : `${backendDomin}/api/actualizarUsuario`,
+    method : "post"
+},
   logout_user: {
     url: `${backendDomin}/api/userLogout`,
     method: "get",
@@ -136,6 +140,14 @@ const SummaryApi = {
   allCupon: {
     url: `${backendDomin}/api/allcupon`,
     method: "get",
+  },
+  createComentario: {
+    url: `${backendDomin}/api/crear-comentario`,
+    method: "post",
+  },
+  getComentarios: {
+    url: `${backendDomin}/api/comentarios`,
+    method: "post",
   },
   discount: {
     url: `${backendDomin}/api/discounts`,
