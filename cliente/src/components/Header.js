@@ -63,7 +63,7 @@ const Header = () => {
             alt="Logo"
             className="w-[65px] h-[62px]"
           />
-          <p className="ml-2 text-BLACK text-lg font-bold">LICORERA TULUA</p>
+          <p className="ml-2 text-white text-lg font-bold">LICORERA TULUA</p>
           </Link>
         </div>
 
@@ -123,6 +123,13 @@ const Header = () => {
                   >
                     Perfil
                   </Link>
+                  <Link
+                    to={"/order"}
+                    className="whitespace-nowrap hidden md:block hover:bg-slate-200 rounded-full p-2"
+                    onClick={() => setMenuDisplay((preve) => !preve)}
+                  >
+                    Ordenes
+                  </Link>
                 </nav>
               </div>
             )}
@@ -134,7 +141,7 @@ const Header = () => {
                 <FaShoppingCart />
               </span>
 
-              <div className="bg-white text-red w-5 h-5 rounded-full p-1 flex items-center justify-center absolute -top-2 -right-4">
+              <div className="bg-white text-red-900 w-5 h-5 rounded-full p-1 flex items-center justify-center absolute -top-2 -right-4">
                 <p className="text-sm">{context?.cartProductCount}</p>
               </div>
             </Link>
@@ -144,14 +151,14 @@ const Header = () => {
             {user?._id ? (
               <button
                 onClick={handleLogout}
-                className="bg-slate-50 text-red px-3 py-1 rounded-full hover:bg-slate-200"
+                className="bg-slate-50 text-red-900 px-3 py-1 rounded-full hover:bg-slate-200"
               >
                 Cerrar
               </button>
             ) : (
               <Link
                 to={"/login"}
-                className="bg-slate-50 text-red px-3 py-1 rounded-full hover:bg-slate-200"
+                className="bg-slate-50 text-red-900 px-3 py-1 rounded-full hover:bg-slate-200"
               >
                 Iniciar sesión
               </Link>

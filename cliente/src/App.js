@@ -60,6 +60,10 @@ function App() {
 
   return (
     <>
+    <div className={showBanner ? 'no-interaction' : ''}>
+    {/* El resto de tu contenido de la página aquí */}
+
+
       {showBanner && !user?._id && (
         <div className="overlay-container">
           <div className="overlay"></div>
@@ -83,8 +87,9 @@ function App() {
           </div>
         </div>
       )}
+    </div>
 
-      <div className={`App ${showBanner ? 'no-interaction' : ''}`}>
+      <div>
         <div className="floating-button-container">
           <a
             href="https://wa.me/573167809782"
